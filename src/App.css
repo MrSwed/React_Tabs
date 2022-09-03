@@ -1,34 +1,68 @@
-.tabs{
-  font-family:arial;
-  margin:0 auto;
-  width:70%;
-  text-align:center;
-  margin-top:15vh;
+:root {
+  --line-size: 3px;
+  --line-colour: #74c6e5;
+  --hover-colour: #07698e;
 }
 
-img{
-  width:300px;
+body {
+  padding: 30px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.tab-buttons{
-  margin-bottom:50px;
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-button{
-  margin-right:15px;
-  font-size:20px;
-  background:transparent;
-  border:none;
-  outline:none;
-  padding:10px 20px ;
-  cursor:pointer;
-  color:rgba(0,0,0,.4);
-  transition:all ease-in-out .2s;
-  border-bottom:2px solid transparent;
-
+.wrapper {
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
 }
-.active{
-  border-bottom:2px solid #42b3f4;
 
-  color:black;
+.tab-content {
+  padding: 30px 0;
+  line-height: 1.6;
+}
+
+/* Tabs */
+.tabs-list {
+  display: flex;
+  border-bottom: var(--line-size) solid #ecf0f5;
+  position: relative;
+}
+
+.tabs-list__item {
+  margin-right: 30px;
+}
+
+/* The individual tab buttons */
+.tabs-list__tab {
+  display: block;
+  color: #2c3642;
+  padding: 18px 6px;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.tabs-list__tab:hover {
+  color: var(--hover-colour);
+}
+
+/* A psuedo-element to use as an active underline */
+.tabs-list__tab:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: var(--line-size);
+  width: 100%;
+}
+
+.tabs-list__tab.active:after {
+  background-color: var(--line-colour);
 }
