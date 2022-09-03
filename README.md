@@ -1,3 +1,7 @@
+# About this one 
+
+This is try to add activity to tabs switching with changing url hash and possible copy open tab url
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
